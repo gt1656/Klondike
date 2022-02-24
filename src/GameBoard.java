@@ -54,6 +54,16 @@ public class GameBoard implements Drawable, Updateable {
 	public void justClicked(MouseEvent me) {
 		Point p = me.getPoint();
 		System.out.println("You just clicked "+p);
+// 		if(firstClick){ 
+// 			firstClick(x, y);
+// 		}
+// 		else{
+// 			secondClick(x, y); 
+// 		}
+//note: first click method -  go to up (top) pile, and ask if the click was in the bounds/check if the cards are showing, 
+//to which it answers 
+//(yes, in bounds/has card, no, has card/not in bounds, yes, has cards, but not in bound)
+//if it is in bounds/has cards, tell card to draw itself differently, 
 
 
 	}
