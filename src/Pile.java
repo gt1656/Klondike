@@ -38,6 +38,47 @@ public abstract class Pile implements Drawable, Updateable {
         return list.size();
     }
 
+    //shuffle 
+    public void shuffle() {
+          if (this.getSize() < 2){
+              return;
+          }
+  
+          if (this.getSize() == 2 ){
+              boolean heads;
+              if(Math.random() < 0.5){
+                  heads = true;
+              }
+              else{
+                  heads = false;
+              }
+              if(heads = true){ 
+                  int firstCard = 0;
+                  int secondCard = 1;
+                  Card temp = list.get(firstCard);
+                  list.set(firstCard, list.get(secondCard)); 
+                  list.set(secondCard, temp); 
+              }
+          }
+  
+          if(this.getSize() > 2){
+              for(int x = 0; x < (list.size() * 2); x++){
+                  int firstCard = (int)(Math.random() * list.size());
+                  int secondCard = (int)(Math.random() * list.size());
+                  while(firstCard == secondCard){
+                      secondCard = (int)(Math.random() * list.size());
+                  }
+                  Card temp = list.get(firstCard);
+                  list.set(firstCard, list.get(secondCard)); 
+                  list.set(secondCard, temp); 
+              }
+          }
+  
+              // two different variables (firstCard and secondCard), check if they are same, if not, then swap them 
+      }
+        
+      
+
     // private int getnumCards(){
     //     return numCards;
     // }
